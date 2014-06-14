@@ -17,7 +17,7 @@ module DescribableError
   end
 
   module ClassMethods
-    def transform_error_keys(&block)
+    def transform_error(&block)
       self.transform_error_json = block.to_proc if block
     end
 

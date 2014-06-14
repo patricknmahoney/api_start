@@ -2,7 +2,7 @@ load "helpers/concerns/describable_error.rb"
 class PermissionDeniedError < StandardError
   include DescribableError
 
-  transform_error_keys do |error_hash|
+  transform_error do |error_hash|
     transformed = error_hash.slice(
       "sinatra.error",
       "PATH_INFO",

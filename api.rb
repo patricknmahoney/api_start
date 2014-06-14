@@ -20,6 +20,7 @@ class Api < Sinatra::Base
   register Sinatra::ActiveRecordExtension
   set :database_file, "./config/database.yml"
   set :server, :puma
+  set :show_exceptions, false
 
   before do
     content_type :json
